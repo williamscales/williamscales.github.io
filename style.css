@@ -1,0 +1,79 @@
+:root {
+    --main-bg-color: #f3f4f6;
+    --title-color: #262626;
+    --text-color: #525252;
+    --font-family: "Lato", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    font-family: var(--font-family);
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--title-color);
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header a {
+    color: white;
+}
+
+section {
+    container-type: inline-size;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    width: 60%;
+    max-width: 1000px;
+
+    & h2, h3 {
+	color: var(--title-color);
+	margin: 0 0 1rem 0;
+	text-wrap: balance;
+    }
+
+    &h2 { 
+	font-size: 1em;
+    }
+
+    &h3 {
+	font-size: 0.8em;
+    }
+
+    & p {
+	color: var(--text-color);
+    }
+}
+
+.skill_name {
+    font-weight: 700;
+}
+
+@container (min-inline-size: 500px) {
+    section {
+	padding: 1.5rem;
+
+	& h2 {
+	    font-size: 1.25em;
+	}
+
+	& h3 {
+	    font-size: 1em;
+	}
+    }
+}
