@@ -64,17 +64,3 @@ section {
     & li {
 	margin: 0 0 1rem 0;
 }
-
-@container (min-inline-size: 500px) {
-    section {
-	padding: 1.5rem;
-
-	& h2 {
-	    font-size: 1.25em;
-	}
-
-	& h3 {
-	    font-size: 1em;
-	}
-    }
-}
