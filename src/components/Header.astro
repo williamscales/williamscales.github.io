@@ -1,0 +1,36 @@
+---
+interface Props {
+    name: string;
+    occupation: string;
+    address: string;
+    url: string;
+    urlText: string;
+}
+
+const {name, occupation, address, url, urlText} = Astro.props;
+---
+<header>
+    <h1>{name}</h1>
+    <h2>{occupation}</h2>
+    <address>
+        {address}<br>
+        Open to relocate
+    </address>
+    <p><a href={url}>{urlText}</a></p>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">About</a>
+            </li>
+            <li>
+                <a href="/projects/">Projects</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    li {
+        display: inline;
+    }
+</style>

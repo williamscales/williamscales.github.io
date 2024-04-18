@@ -1,0 +1,72 @@
+---
+import {CollectionEntry} from 'astro:content';
+
+interface Props {
+    card: CollectionEntry<'cards'>
+}
+
+const {card} = Astro.props;
+const {Content} = await card.render();
+---
+
+<section>
+    <h2>
+        {card.data.title}
+    </h2>
+    <p>
+        <Content/>
+    </p>
+</section>
+<style>
+    section {
+        container-type: inline-size;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        min-width: 300px;
+        width: 60%;
+        max-width: 800px;
+
+        /*noinspection CssInvalidPropertyValue*/
+
+        & h2,
+        h3 {
+            color: var(--title-color);
+            text-wrap: balance;
+        }
+
+        & h2 {
+            margin: 0 0 1rem 0;
+            font-size: 1.25em;
+        }
+
+        & h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1em;
+        }
+
+        & p {
+            color: var(--text-color);
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        & li {
+            margin: 0 0 1rem 0;
+        }
+    }
+
+    @container (min-inline-size: 500px) {
+        section {
+            padding: 1.5rem;
+
+            & h2 {
+                font-size: 1.25em;
+            }
+
+            & h3 {
+                font-size: 1em;
+            }
+        }
+    }
+</style>
