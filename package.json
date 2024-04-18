@@ -1,0 +1,25 @@
+{
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/mdx": "^2.2.4",
+    "astro": "^4.5.17",
+    "typescript": "^5.4.4"
+  },
+  "devDependencies": {
+    "@sentry/astro": "^7.111.0",
+    "@spotlightjs/astro": "^1.0.20",
+    "cypress": "13.2.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
+  }
+}
